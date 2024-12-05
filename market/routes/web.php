@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +25,16 @@ Route::post('/review/check', [MainController::class, 'review_check']);
 //  return 'ID:'.$id.'Name:'.$name;
 //});
 
-Route::get('/singin', [MainController::class, 'singin']);
+Route::get('/singin', [MainController::class, 'singin'])->name('singin');
 Route::post('/singin/check/', [MainController::class, 'singin_check']);
 Route::get('/register', [MainController::class, 'register']);
 Route::post('/register/check/', [MainController::class, 'register_check']);
 Route::post('/logout', [MainController::class, 'logout'])->name('logout');
+
+
+
+Route::get('/categories', [ProductController::class, 'categories'])->name('categories');
+Route::get('/product/{category}', [ProductController::class, 'product'])->name('product');
+
+Route::get('/products/add', [ProductController::class, 'addProduct'])->middleware('auth')->name('products.add');
+Route::post('/products/add', [ProductController::class, 'storeProduct'])->middleware('auth')->name('products.store');
