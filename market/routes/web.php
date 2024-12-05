@@ -34,7 +34,7 @@ Route::post('/logout', [MainController::class, 'logout'])->name('logout');
 
 
 Route::get('/categories', [ProductController::class, 'categories'])->name('categories');
-Route::get('/product/{category}', [ProductController::class, 'product'])->name('product');
+Route::get('/categories/{category}', [ProductController::class, 'products'])->name('products');
 
 Route::get('/products/add', [ProductController::class, 'addProduct'])->middleware('auth')->name('products.add');
 Route::post('/products/add', [ProductController::class, 'storeProduct'])->middleware('auth')->name('products.store');
