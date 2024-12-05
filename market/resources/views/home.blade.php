@@ -16,7 +16,7 @@
          height="140"> 
       <h2 class="fw-normal">Quality Cat Care</h2>
         <p>Our premium cat products are designed with your feline's comfort and happiness in mind. From luxurious beds to irresistible toys, we’ve got it all.</p>
-        <p><a class="btn btn-secondary" href="#">Explore Products »</a></p>
+        <p><a class="btn btn-secondary" href="{{"/categories/"}}">Explore Products »</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
          <img src="https://i.pinimg.com/736x/13/51/89/135189664c7f7189781e8c2146eed486.jpg" 
@@ -27,7 +27,7 @@
       <h2 class="fw-normal">Community Love</h2>
     
         <p>Join our community of cat lovers! Share stories, tips, and connect with others who adore their whiskered companions as much as you do.</p>
-        <p><a class="btn btn-secondary" href="#">Join Us »</a></p>
+        <p><a class="btn btn-secondary" href="{{"/review/"}}">Join Us »</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
       <img src="https://i.pinimg.com/736x/a4/d1/42/a4d142e929903b6b076b31026aa02db0.jpg" 
@@ -37,7 +37,7 @@
          height="140"> 
       <h2 class="fw-normal">Adopt & Save</h2>
         <p>Looking to add a new furry member to your family? Check out our adoption program and give a cat in need a loving home.</p>
-        <p><a class="btn btn-secondary" href="#">Find a Friend »</a></p>
+        <p><a class="btn btn-secondary" href="{{"/about/"}}">About Us »</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
