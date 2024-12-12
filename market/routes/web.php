@@ -21,9 +21,6 @@ Route::get('/', [MainController::class, 'home']);
 Route::get('/about', [MainController::class, 'about']);
 Route::get('/review', [MainController::class, 'review'])->name('review');
 Route::post('/review/check', [MainController::class, 'review_check']);
-//Route::get('/user/{id}/{name}', function($id, $name){
-//  return 'ID:'.$id.'Name:'.$name;
-//});
 
 Route::get('/singin', [MainController::class, 'singin'])->name('singin');
 Route::post('/singin/check/', [MainController::class, 'singin_check']);
@@ -38,7 +35,5 @@ Route::get('/categories/{category}', [ProductController::class, 'products'])->na
 
 Route::get('/products/add', [ProductController::class, 'addProduct'])->middleware('auth')->name('products.add');
 Route::post('/products/add', [ProductController::class, 'storeProduct'])->middleware('auth')->name('products.store');
-
-// Страница продукта
 Route::get('/products/{product}', [ProductController::class, 'showProduct'])->name('products.show');
 

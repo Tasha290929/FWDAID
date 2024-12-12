@@ -54,19 +54,13 @@ public function singin(){
 
     public function singin_check(Request $request)
     {
-        // Проверка входных данных
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
-    
-        // Попытка аутентификации
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // Аутентификация успешна
             return redirect()->intended('/')->with('success', 'Вы успешно вошли!');
         }
-    
-        // Аутентификация не удалась
         return back()->withErrors([
             'email' => 'Неверный email или пароль.',
         ])->withInput($request->only('email'));
@@ -79,32 +73,24 @@ public function singin(){
     }
     public function register_check(Request $request)
     {
-        // Валидация данных
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:8|confirmed',
             'password_confirmation' => 'required'
         ]);
-    
-        // Создание нового пользователя
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
         ]);
-    
-        // Авторизация пользователя после регистрации (опционально)
         auth()->login($user);
-    
-        // Перенаправление на главную страницу
         return redirect('/')->with('success', 'Registration successful! You are now signed in.');
     }
     public function logout(Request $request)
 {
     Auth::logout();
 
-    // Очистка сессии
     $request->session()->invalidate();
     $request->session()->regenerateToken();
 
