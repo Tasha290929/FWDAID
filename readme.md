@@ -260,15 +260,31 @@ Route::get('/products/{product}', [ProductController::class, 'showProduct'])->na
 
 - `review.blade.php`
 
-
+![alt text](image-2.png)
 
 - `singin.blade.php`
+
+![alt text](image-3.png)
+
 - `register.blade.php`
+
+![alt text](image-4.png)
+
 - `categories.blade.php`
+
+![alt text](image-5.png)
+
 - `products.blade.php`
+
+![alt text](image-6.png)
+
 - `products.add.blade.php`
+
+![alt text](image-8.png)
+
 - `products.show.blade.php`
 
+![alt text](image-7.png)
 
 
 ## Использованные источники
