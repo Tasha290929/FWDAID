@@ -1,24 +1,28 @@
+# PHP + Apache
 FROM php:8.2-apache
 
-# Установим нужные PHP-расширения
+# Устанавливаем зависимости
 RUN apt-get update && apt-get install -y \
     libzip-dev zip unzip git \
     && docker-php-ext-install pdo_mysql zip
 
-# Установим Composer
+# Устанавливаем Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Копируем файлы проекта
-COPY . /var/www/html
+# Копируем Laravel проект из папки market
+COPY ./market /var/www/html
 
-# Установим зависимости проекта
+# Переходим в папку проекта
 WORKDIR /var/www/html
+
+# Устанавливаем зависимости
 RUN composer install --no-dev --optimize-autoloader
 
-# Генерируем ключ приложения
+# Генерация ключа приложения
 RUN php artisan key:generate
 
 # Разрешаем права
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
+# Открываем порт
 EXPOSE 80
