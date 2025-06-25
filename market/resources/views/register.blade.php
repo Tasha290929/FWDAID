@@ -5,7 +5,7 @@ Sing In
 
 @section('main_content')
 <div class="d-flex justify-content-center align-items-center vh-100 bg-body-tertiary">
-  <form method="POST" action="/register/check/" class="p-4 shadow rounded bg-white" style="width: 100%; max-width: 400px;">
+  <form method="POST" action="/register/check" class="p-4 shadow rounded bg-white" style="width: 100%; max-width: 400px;">
     @csrf
 
     <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
