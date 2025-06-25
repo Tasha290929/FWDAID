@@ -284,7 +284,7 @@ Route::get('/products/{product}', [ProductController::class, 'showProduct'])->na
 
 - `products.show.blade.php`
 
-![alt text](image-7.png)
+![alt text](image-11.png)
 
 - `cart\index.blade.php`
 
