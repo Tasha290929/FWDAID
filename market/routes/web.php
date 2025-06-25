@@ -28,6 +28,10 @@ Route::get('/singin', [MainController::class, 'singin'])->name('singin');
 Route::post('/singin/check/', [MainController::class, 'singin_check']);
 Route::get('/register', [MainController::class, 'register']);
 Route::post('/register/check/', [MainController::class, 'register_check']);
+Route::get('/register/check', function() {
+    return redirect('/register');
+});
+
 Route::post('/logout', [MainController::class, 'logout'])->name('logout');
 
 
