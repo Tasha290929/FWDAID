@@ -21,7 +21,7 @@ class ProductController extends Controller
 
     public function addProduct()
     {
-        $categories = Category::all(); // Подгрузите категории для выпадающего списка
+        $categories = Category::all();
         return view('products.add', compact('categories'));
     }
     
