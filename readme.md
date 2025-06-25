@@ -286,6 +286,13 @@ Route::get('/products/{product}', [ProductController::class, 'showProduct'])->na
 
 ![alt text](image-7.png)
 
+- `cart\index.blade.php`
+
+![alt text](image-9.png)
+
+- `order.blade.php`
+
+![alt text](image-10.png)
 
 ## Использованные источники
 
