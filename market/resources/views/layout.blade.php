@@ -24,7 +24,7 @@
             <span class="fs-4">Cat`s Company</span>
         </a>
 
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <nav class="d-inline-flex mt-2 mt-md-0 p-2 ms-md-auto">
 
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{{"/categories/"}}">Products</a>
             <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{{"/about/"}}">About us</a>
@@ -35,6 +35,7 @@
                 <a class="py-2 link-body-emphasis text-decoration-none" href="{{"/register/" }}">Register</a>
                 @endguest
                 @auth
+                  <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{{"/products/add"}}">Add Products</a>
                 <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{{ route('cart.index') }}">
                     <i class="bi bi-cart"></i> Cart
                 </a>

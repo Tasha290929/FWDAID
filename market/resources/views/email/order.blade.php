@@ -4,7 +4,7 @@
 You ordered:
 
 @foreach ($items as $item)
-- **{{ $item->product->name }}** — {{ $item->quantity }} шт. по {{ $item->price }} $ = {{ $item->price * $item->quantity }} $
+- **{{ $item->product->name }}** — {{ $item->quantity }} pieces by {{ $item->price }} $ = {{ $item->price * $item->quantity }} $
 @endforeach
 
 **Total amount:** {{ $total }} $

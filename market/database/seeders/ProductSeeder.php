@@ -25,6 +25,22 @@ My cats devoured this dry food which I honestly thought would not happen. I had 
         'category_id' => 1,
         'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
+    ],
+        [
+        'name' => 'Royal Canin – Intense Beauty Gravy',
+        'description' => 'A high-quality wet food rich in Omega-3 and Omega-6 fatty acids to support healthy skin and a shiny coat. Cats love the rich gravy and tender meat chunks.',
+        'price' => 2.99,
+        'category_id' => 2, 
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now(),
+    ],
+    [
+        'name' => 'Interactive Feather Toy',
+        'description' => 'This automatic feather toy will keep your cat entertained for hours. The unpredictable movement simulates prey and encourages natural hunting instincts.',
+        'price' => 15.49,
+        'category_id' => 3,
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now(),
     ]
     
 ]);
